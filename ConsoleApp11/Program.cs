@@ -6,9 +6,14 @@ namespace MyConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter your name:");
-            string name = Console.ReadLine();
-            Console.WriteLine("Hello, " + name + "!");
+            Console.WriteLine("Enter a number:");
+            int number = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Counting to " + number + ":");
+            for (int i = 1; i <= number; i++)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
