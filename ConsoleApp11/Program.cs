@@ -6,7 +6,9 @@ namespace MyConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! The current time is " + DateTime.Now);
+            Console.WriteLine("Please enter your name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello, " + name + "!");
         }
     }
 }
