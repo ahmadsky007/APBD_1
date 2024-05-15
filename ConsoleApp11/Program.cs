@@ -6,14 +6,19 @@ namespace MyConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number:");
-            int number = int.Parse(Console.ReadLine());
+            int[] numbers = { 10, 20, 30, 40, 50 };
+            double average = CalculateAverage(numbers);
+            Console.WriteLine($"The average is: {average}");
+        }
 
-            Console.WriteLine("Counting to " + number + ":");
-            for (int i = 1; i <= number; i++)
+        static double CalculateAverage(int[] nums)
+        {
+            int sum = 0;
+            for (int i = 0; i < nums.Length; i++)
             {
-                Console.WriteLine(i);
+                sum += nums[i];
             }
+            return (double)sum / nums.Length;
         }
     }
 }
